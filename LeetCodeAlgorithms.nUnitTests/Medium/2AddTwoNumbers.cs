@@ -1,9 +1,11 @@
 ﻿using LeetCodeAlgorithms.Common;
 
-namespace LeetCodeAlgorithms.Tasks.Medium
+namespace LeetCodeAlgorithms.Medium
 {
     /// <summary>
     /// Task: https://leetcode.com/problems/add-two-numbers/
+    /// Runtime: 72ms
+    /// Memory: 51.41MB
     /// </summary>  
 
     public class _2AddTwoNumbers
@@ -45,7 +47,7 @@ namespace LeetCodeAlgorithms.Tasks.Medium
                 return false;
             }
 
-            if ((result.next != null && expectedResult == null ) || result.next == null && expectedResult != null)
+            if (result.next != null && expectedResult == null || result.next == null && expectedResult != null)
             {
                 return false;
             }
@@ -78,7 +80,6 @@ namespace LeetCodeAlgorithms.Tasks.Medium
             expectedResult.next.next = new ListNode() { val = 8 };
 
             Assert.That(RecursiveCheck(result, expectedResult), Is.True);
-            //return RecursiveCheck(result, expectedResult);          
         }
     }
 }
