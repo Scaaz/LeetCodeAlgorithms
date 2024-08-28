@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeAlgorithms.Medium
 {
     /// <summary>
-    /// Task: https://leetcode.com/problems/longest-substring-without-repeating-characters
+    /// Submission: https://leetcode.com/submissions/detail/1371413661/
     /// Runtime: 64ms
     /// Memory: 42.67MB
     /// </summary>  

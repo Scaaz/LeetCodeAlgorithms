@@ -3,7 +3,7 @@
 namespace LeetCodeAlgorithms.Medium
 {
     /// <summary>
-    /// Task: https://leetcode.com/problems/add-two-numbers/
+    /// Submission: https://leetcode.com/submissions/detail/1366819141/
     /// Runtime: 72ms
     /// Memory: 51.41MB
     /// </summary>  
