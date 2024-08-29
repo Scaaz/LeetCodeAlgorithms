@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeAlgorithms.Easy
 {
     /// <summary>
-    /// Task: https://leetcode.com/submissions/detail/1370527752/
+    /// Submission: https://leetcode.com/submissions/detail/1370527752/
     /// Runtime: 105ms
     /// Memory: 49.03MB
     /// </summary>  
