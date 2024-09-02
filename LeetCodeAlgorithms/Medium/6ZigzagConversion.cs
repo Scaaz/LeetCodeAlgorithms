@@ -15,13 +15,33 @@ namespace LeetCodeAlgorithms.Medium
                 return s;
             }
 
-            var finalString = new char[s.Length];
-            for(int row =0; row<numRows;row++)
-            {            
-                for (int i = 0; i < s.Length; i++)
+            var finalString = "";
+            var gap = 2*numRows-2;
+            for (int row =0; row < numRows ;row++)
+            {
+               
+                if(row !=0 && row <= numRows/2)
                 {
-                   finalString[i] += s[2 * numRows - 2 * i+row];                        
+                    gap--;
+                    gap--;
                 }
+                else if (row != 0 && row > numRows / 2)
+                {
+                    gap++;
+                    gap++;
+                }
+
+                for (int i = row; i < s.Length; i += gap)
+                {
+                        finalString += s[i];
+                }
+
+
+
+                //    for (int i = 0; (2 * numRows - 2 * i + row) < s.Length; i++)
+                //{
+                //   finalString[i] += s[2 * numRows - 2 * i + row];                        
+                //}
             }
             return new string(finalString);
         }
