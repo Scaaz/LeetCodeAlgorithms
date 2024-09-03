@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace LeetCodeAlgorithms.Medium
 {
+    /// <summary>
+    /// Submission: https://leetcode.com/submissions/detail/1378128172/
+    /// Runtime: 63ms
+    /// Memory: 52.29MB
+    /// </summary>
     internal class _6ZigzagConversion
     {
         private string Convert(string s, int numRows)
@@ -15,35 +16,24 @@ namespace LeetCodeAlgorithms.Medium
                 return s;
             }
 
-            var finalString = "";
-            var gap = 2*numRows-2;
-            for (int row =0; row < numRows ;row++)
+            StringBuilder[] result = new StringBuilder[numRows];
+            var direction = 1;
+            var i = 0;
+            for (int j = 0; j < numRows; j++)
             {
-               
-                if(row !=0 && row <= numRows/2)
-                {
-                    gap--;
-                    gap--;
-                }
-                else if (row != 0 && row > numRows / 2)
-                {
-                    gap++;
-                    gap++;
-                }
-
-                for (int i = row; i < s.Length; i += gap)
-                {
-                        finalString += s[i];
-                }
-
-
-
-                //    for (int i = 0; (2 * numRows - 2 * i + row) < s.Length; i++)
-                //{
-                //   finalString[i] += s[2 * numRows - 2 * i + row];                        
-                //}
+                result[j] = new StringBuilder();
             }
-            return new string(finalString);
+
+            foreach (char c in s)
+            {
+                result[i].Append(c);
+                i += direction;
+                if (i == numRows - 1 || i == 0)
+                {
+                    direction *= -1;
+                }
+            }
+            return string.Concat(result.Select(sb => sb.ToString()));
         }
 
         [Test]
