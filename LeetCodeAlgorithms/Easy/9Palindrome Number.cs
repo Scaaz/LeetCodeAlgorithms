@@ -7,7 +7,7 @@
         /// Runtime: 50ms
         /// Memory: 32.79MB
         /// </summary> 
-        public bool IsPalindrome(int x)
+        private bool IsPalindrome(int x)
         {
             if (x < 0)
                 return false;
@@ -26,7 +26,7 @@
         }
 
         //Shortest version, but slower
-        public bool ShortestPossible(int x)
+        private bool ShortestPossible(int x)
         {
             if (x < 0)
                 return false;
