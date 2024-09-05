@@ -1,6 +1,6 @@
 ﻿namespace LeetCodeAlgorithms.Easy
 {
-    internal class _7ReverseInteger
+    internal class _0007ReverseInteger
     {
         /// <summary>
         /// Submission: https://leetcode.com/submissions/detail/1373610664/

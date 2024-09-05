@@ -1,6 +1,6 @@
 ﻿namespace LeetCodeAlgorithms.Easy
 {
-    internal class _9Palindrome_Number
+    internal class _0009Palindrome_Number
     {
         /// <summary>
         /// Submission: https://leetcode.com/submissions/detail/1379040406/

@@ -5,7 +5,7 @@
     /// Runtime: 95ms
     /// Memory: 54.72MB
     /// </summary>  
-    internal class _4MedianOfTwoSortedArrays
+    internal class _0004MedianOfTwoSortedArrays
     {
         private double FindMedianSortedArrays(int[] nums1, int[] nums2)
         {

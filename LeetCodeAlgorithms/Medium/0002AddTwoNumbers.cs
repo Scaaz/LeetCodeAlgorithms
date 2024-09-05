@@ -7,7 +7,7 @@ namespace LeetCodeAlgorithms.Medium
     /// Runtime: 72ms
     /// Memory: 51.41MB
     /// </summary>  
-    public class _2AddTwoNumbers
+    public class _0002AddTwoNumbers
     {
         private ListNode AddTwoNumbers(ListNode l1, ListNode l2, bool extraOne = false)
         {

@@ -7,7 +7,7 @@ namespace LeetCodeAlgorithms.Medium
     /// Runtime: 63ms
     /// Memory: 52.29MB
     /// </summary>
-    internal class _6ZigzagConversion
+    internal class _0006ZigzagConversion
     {
         private string Convert(string s, int numRows)
         {

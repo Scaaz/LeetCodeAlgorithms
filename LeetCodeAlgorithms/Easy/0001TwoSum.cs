@@ -5,7 +5,7 @@
     /// Runtime: 105ms
     /// Memory: 49.03MB
     /// </summary>  
-    internal class _1TwoSum
+    internal class _0001TwoSum
     {
 
         private int[] TwoSum(int[] nums, int target)

@@ -1,6 +1,6 @@
 ﻿namespace LeetCodeAlgorithms.Medium
 {
-    internal class _5LongestPalindromic
+    internal class _0005LongestPalindromic
     {
         /// <summary>
         /// Submission: https://leetcode.com/submissions/detail/1374656682/

@@ -5,7 +5,7 @@
     /// Runtime: 64ms
     /// Memory: 42.67MB
     /// </summary>  
-    internal class _3LongestSubstring
+    internal class _0003LongestSubstring
     {   
         private int LengthOfLongestSubstring(string s)
         {

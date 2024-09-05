@@ -1,6 +1,6 @@
 ﻿namespace LeetCodeAlgorithms.Medium
 {
-    internal class _8StringToInteger
+    internal class _0008StringToInteger
     {
         /// <summary>
         /// Submission: https://leetcode.com/submissions/detail/1378990174/
