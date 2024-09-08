@@ -42,6 +42,7 @@ namespace LeetCodeAlgorithms.Hard
                     continue;
                 }
 
+
                 if (s[i] != p[i+ counter])
                 {
                     return false;
