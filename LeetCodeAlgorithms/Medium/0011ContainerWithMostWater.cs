@@ -2,46 +2,38 @@
 {
     internal class _0011ContainerWithMostWater
     {
+        /// <summary>
+        /// Submission: https://leetcode.com/submissions/detail/1387558196/
+        /// Runtime: 236ms
+        /// Memory: 62.31MB
+        /// </summary>
         public int MaxArea(int[] height)
         {
             var maxArea = 0;
-            for (int i = 0; i < height.Length; i++)
+            var left = 0;
+            var right = height.Length - 1;
+
+            while (left < right)
             {
+                var area = 0;
+                if (height[left] > height[right])
+                {
+                    area = height[right] * (right-left);
+                    right--;
+                }
+                else
+                {
+                    area = height[left] * (right-left);
+                    left++;
+                }           
 
-
+                if(area > maxArea)
+                {
+                    maxArea = area;
+                }      
             }
-
             return maxArea;
         }
-        //public int MaxArea(int[] height)
-        //{
-        //    var maxArea = 0;
-        //    var currenArea = 0;
-        //    for (int i = 0; i < height.Length; i++)
-        //    {                
-        //        for (int j = 0; j < height.Length; j++)
-        //        {
-
-        //            if (height[i] > height[j])
-        //            {
-        //                //j mniejsze
-        //                currenArea = height[j] * Math.Abs(i - j); 
-        //            }
-        //            else
-        //            {
-        //                currenArea = height[i] * Math.Abs(i - j);
-        //            }
-
-        //            if(currenArea > maxArea)
-        //            {
-        //                maxArea = currenArea;
-        //            }
-        //        }
-        //    }
-        //    return maxArea;
-        //}
-
-
 
         [Test]
         public void TestCase()
