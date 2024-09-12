@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LeetCodeAlgorithms.Medium
+﻿namespace LeetCodeAlgorithms.Medium
 {
     class _0012IntegerToRoman
     {
-
+        /// <summary>
+        /// Submission: https://leetcode.com/submissions/detail/1387787896/
+        /// Runtime: 58ms
+        /// Memory: 44.50MB
+        /// </summary>
         public string IntToRoman(int num)
         {
             var roman = "";
@@ -25,7 +23,6 @@ namespace LeetCodeAlgorithms.Medium
             var v = (int)(num / 5);
             num = num % 5;
             var i = (int)(num);
-
 
             while(m>0)
             {
