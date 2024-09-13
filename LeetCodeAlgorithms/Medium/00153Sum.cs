@@ -2,6 +2,11 @@
 {
     internal class _00153Sum
     {
+        /// <summary>
+        /// Submission: https://leetcode.com/submissions/detail/1389142578/
+        /// Runtime: 162ms
+        /// Memory: 74.91MB
+        /// </summary>
         public IList<IList<int>> ThreeSum(int[] nums)
         {
             if (nums.Length < 3) return new List<IList<int>>();
