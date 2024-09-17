@@ -41,7 +41,6 @@
                         right--;
                 }
             }
-
             return triplets;
         }
 
