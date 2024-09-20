@@ -73,7 +73,7 @@
         public void TestCase()
         {
             var result = FourSum([1, 0, -1, 0, -2, 2], 0);
-            List<IList<int>> expectedResult = [[-1, -1, 2], [-1, 0, 1]];
+            List<IList<int>> expectedResult = [[-2, -1, 1, 2], [-2, 0, 0, 2], [-1, 0, 0, 1]];
             Assert.That(result, Is.EqualTo(expectedResult));
         }
 
