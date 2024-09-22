@@ -41,7 +41,7 @@
         }
 
         [Test]
-        public void SecondTestCase()
+        public void TestCase2()
         {
             var nums = new int[] { 3,2,4 };
             var target = 6;
