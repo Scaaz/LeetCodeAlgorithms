@@ -18,10 +18,6 @@
             {
                 this.next = new ListNode(skipped);
             }
-            else
-            {
-                this.val = 0;
-            }
         }
 
     }
