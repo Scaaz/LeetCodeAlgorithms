@@ -1,4 +1,5 @@
 ﻿using LeetCodeAlgorithms.Common;
+using LeetCodeAlgorithms.CommonFiles;
 
 namespace LeetCodeAlgorithms._0000_0050
 {
@@ -37,25 +38,24 @@ namespace LeetCodeAlgorithms._0000_0050
         [Test]
         public void TestCase()
         {
-            var result = RemoveNthFromEnd(new ListNode([1, 2, 3, 4, 5]), 2);
-            var expectedResult  = new ListNode([1, 2, 3, 5]);
-            Assert.That(result, Is.EqualTo(expectedResult));
+            var result = RemoveNthFromEnd( ListNode.GenerateList([1, 2, 3, 4, 5]), 2);
+            int[] expectedResult = [1, 2, 3, 5];
+            AssertHelper.AssertLinkList(ListNode.GenerateList([1, 2, 3, 5 ]), result);
         }
 
         [Test]
         public void TestCase2()
         {
-            var result = RemoveNthFromEnd(new ListNode([1]), 1);
-            var expectedResult = new ListNode([]);
-            Assert.That(result, Is.EqualTo(expectedResult));
+            var result = RemoveNthFromEnd(ListNode.GenerateList([1]), 1);
+            Assert.IsNull(result);
         }
 
         [Test]
         public void TestCase3()
         {
-            var result = RemoveNthFromEnd(new ListNode([1, 2]), 1);
-            var expectedResult = new ListNode([1]);
-            Assert.That(result, Is.EqualTo(expectedResult));
+            var result = RemoveNthFromEnd(ListNode.GenerateList([1, 2]), 1);
+            var expectedResult = ListNode.GenerateList([1]);
+            AssertHelper.AssertLinkList(expectedResult, result);
         }
     }
 }

@@ -37,8 +37,8 @@ namespace LeetCodeAlgorithms.Medium
         [Test]
         public void TestCase()
         {
-            var result = ModifiedList([1, 2, 3], new ListNode([1, 2, 3, 4, 5]));
-            var expectedResult = new ListNode([4, 5]);
+            var result = ModifiedList([1, 2, 3], ListNode.GenerateList([1, 2, 3, 4, 5]));
+            var expectedResult = ListNode.GenerateList([4, 5]);
             while(result.next!=null && expectedResult.next!=null)
             {
                 Assert.That( result.val , Is.EqualTo(expectedResult.val));
@@ -50,8 +50,8 @@ namespace LeetCodeAlgorithms.Medium
         [Test]
         public void TestCase2()
         {
-            var result = ModifiedList([1], new ListNode([1, 2, 1, 2, 1, 2]));
-            var expectedResult = new ListNode([2, 2, 2]);
+            var result = ModifiedList([1], ListNode.GenerateList([1, 2, 1, 2, 1, 2]));
+            var expectedResult = ListNode.GenerateList([2, 2, 2]);
             while (result.next != null && expectedResult.next != null)
             {
                 Assert.That(result.val, Is.EqualTo(expectedResult.val));
@@ -63,8 +63,8 @@ namespace LeetCodeAlgorithms.Medium
         [Test]
         public void TestCase3()
         {
-            var result = ModifiedList([5], new ListNode([1, 2, 3, 4]));
-            var expectedResult = new ListNode([1, 2, 3, 4]);
+            var result = ModifiedList([5], ListNode.GenerateList([1, 2, 3, 4]));
+            var expectedResult = ListNode.GenerateList([1, 2, 3, 4]);
             while (result.next != null && expectedResult.next != null)
             {
                 Assert.That(result.val, Is.EqualTo(expectedResult.val));

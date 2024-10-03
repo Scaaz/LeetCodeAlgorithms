@@ -1,5 +1,5 @@
 ﻿using LeetCodeAlgorithms.Common;
-using Newtonsoft.Json.Linq;
+using LeetCodeAlgorithms.CommonFiles;
 
 namespace LeetCodeAlgorithms._0000_0050
 {
@@ -45,25 +45,25 @@ namespace LeetCodeAlgorithms._0000_0050
         [Test]
         public void TestCase()
         {
-            var result = MergeTwoLists(new ListNode([1, 2, 4]), new ListNode([1, 3, 4]));
-            var expectedResult = new ListNode([1, 1, 2, 3, 4, 4]);
-            Assert.That(result, Is.EqualTo(expectedResult));
+            var result = MergeTwoLists(ListNode.GenerateList([1, 2, 4]), ListNode.GenerateList([1, 3, 4]));
+            var expectedResult = ListNode.GenerateList([1, 1, 2, 3, 4, 4]);
+            AssertHelper.AssertLinkList(result, expectedResult);
         }        
         
         [Test]
         public void TestCase2()
         {
-            var result = MergeTwoLists(new ListNode([]), new ListNode([]));
-            var expectedResult = new ListNode([]);
-            Assert.That(result, Is.EqualTo(expectedResult));
+            var result = MergeTwoLists(ListNode.GenerateList([]), ListNode.GenerateList([]));
+            var expectedResult = ListNode.GenerateList([]);
+            Assert.IsNull(result);
         }        
         
         [Test]
         public void TestCase3()
         {
-            var result = MergeTwoLists(new ListNode([]), new ListNode([0]));
-            var expectedResult = new ListNode([0]);
-            Assert.That(result, Is.EqualTo(expectedResult));
+            var result = MergeTwoLists(ListNode.GenerateList([]), ListNode.GenerateList([0]));
+            var expectedResult = ListNode.GenerateList([0]);
+            AssertHelper.AssertLinkList(result, expectedResult);
         }
     }
 }
