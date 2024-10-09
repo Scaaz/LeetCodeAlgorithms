@@ -3,9 +3,9 @@
     internal class _0028FindTheIndexOfTheFirstOccurrenceInAString
     {
         /// <summary>
-        /// Submission: https://leetcode.com/submissions/detail/1416214375/
-        /// Runtime: 49ms
-        /// Memory: 39.40MB
+        /// Submission: https://leetcode.com/submissions/detail/1417444499/
+        /// Runtime: 40ms
+        /// Memory: 39.75MB
         /// </summary> 
         public int StrStr(string haystack, string needle)
         {
