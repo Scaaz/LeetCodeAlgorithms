@@ -43,27 +43,6 @@ namespace LeetCodeAlgorithms._0000_0050
             return prev;
         }
 
-        public ListNode SwapPairs(ListNode head)
-        {
-            ListNode dummy = new ListNode(0, head);
-            ListNode prev = dummy;
-            ListNode curr = head;
-
-            while (curr != null && curr.next != null)
-            {
-                var first = curr;
-                var second = curr.next;
-
-                first.next = second.next;
-                second.next = first;
-                prev.next = second;
-
-                prev = first;
-                curr = prev.next;
-            }
-            return dummy.next;
-        }
-
         [Test]
         public void TestCase()
         {
