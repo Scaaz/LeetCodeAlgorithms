@@ -51,6 +51,24 @@
             }
             return nums.Length;
         }
+
+        [TestCase(5, 2)]
+        [TestCase(2, 1)]
+        [TestCase(7, 4)]
+        public void TestCase(int target, int expectedResult)
+        {
+            var result = SearchInsert([1, 3, 5, 6], target);
+            Assert.That(result, Is.EqualTo(expectedResult));
+        }
+
+        [TestCase(5, 2)]
+        [TestCase(2, 1)]
+        [TestCase(7, 4)]
+        public void TestCaseSimple(int target, int expectedResult)
+        {
+            var result = SearchInsertSimple([1, 3, 5, 6], target);
+            Assert.That(result, Is.EqualTo(expectedResult));
+        }
     }
 }
 
