@@ -2,37 +2,38 @@
 {
     internal class _0029DivideTwoIntegers
     {
+        // divide two integers without using multiplication, division, and mod operator.
+        // casual adding was "too slow"
+        /// <summary>
+        /// Submission: https://leetcode.com/submissions/detail/1424141171/
+        /// Runtime: 26ms
+        /// Memory: 26.74MB
+        /// </summary>  
         public int Divide(int dividend, int divisor)
         {
-            if (dividend == int.MaxValue && divisor == 1)
-                return int.MaxValue;
-            else if (dividend == int.MaxValue && divisor == -1)
-                return int.MinValue + 1;
-            else if ((dividend == int.MinValue && divisor == -1))
-                return int.MaxValue;
-            else if (((dividend == int.MinValue && divisor == 1)))
-                return int.MinValue;
-
-            int current = 0;
-            int sum = 0;
-            int sign = 1;
-
-            if(dividend > 0 && divisor <0 || dividend < 0 && divisor > 0)
+            if (dividend == int.MinValue && divisor == -1)
             {
-                sign = -1;
+                return int.MaxValue;
             }
-            dividend = Math.Abs(dividend);
-            divisor = Math.Abs(divisor);
-          
-            while (true)
+
+            bool sign = (dividend > 0 && divisor > 0) || (dividend < 0 && divisor < 0);
+
+            dividend = dividend > 0 ? -dividend : dividend;
+            divisor = divisor > 0 ? -divisor : divisor;
+
+            int result = 0;
+            while (dividend <= divisor)
             {
-                sum += divisor;
-                if (sum > dividend)
+                int temp = divisor, count = 1;
+                while (temp >= (int.MinValue >> 1) && dividend <= (temp << 1))
                 {
-                    return sign*current;
+                    temp <<= 1;
+                    count <<= 1;
                 }
-                current++;
+                dividend -= temp;
+                result += count;
             }
+            return sign ? result : -result;
         }
 
 
